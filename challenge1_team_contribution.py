@@ -6,8 +6,7 @@
 #             if i!=j:
 #                 impact[i]*=contributions[j]
 #     return impact
-# print(team_contribution([1,2,3,4]))  
-# print(team_contribution([-1, 1, 0, -3, 3]))  
+# print(team_contribution([1,2,3,4]))    
 
 
 def team_contribution(contributions): 
@@ -15,6 +14,7 @@ def team_contribution(contributions):
     prefix=[1]*length
     suffix=[1]*length
     impact=[1]*length 
+
     for i in range(1,length):
         prefix[i] = prefix[i-1] * contributions[i-1]
     for i in range(length-2,-1,-1):
