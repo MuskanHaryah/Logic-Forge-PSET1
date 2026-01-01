@@ -1,0 +1,1 @@
+# If current string is valid → record it
