@@ -1,0 +1,18 @@
+def towerOfHanoi(n, from_rod, to_rod, aux_rod):
+
+    # Base case: Only 1 disk → move directly
+    if n == 1:
+        print(f"Disk 1 moved from {from_rod} to {to_rod}")
+        return
+    
+    # Step 1: Move top n-1 disks from source to helper
+    towerOfHanoi(n-1, from_rod, aux_rod, to_rod)
+
+    # Step 2: Move largest disk from source to destination
+    print(f"Disk {n} moved from {from_rod} to {to_rod}")
+
+    # Step 3: Move the n-1 disks from helper to destination
+    towerOfHanoi(n-1, aux_rod, to_rod, from_rod)
+
+
+towerOfHanoi(3, "A", "C", "B")
