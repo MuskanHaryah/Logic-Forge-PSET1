@@ -8,7 +8,7 @@
 #     return impact
 # print(team_contribution([1,2,3,4]))    
 
-
+# optimized version
 def team_contribution(contributions): 
     length= len(contributions)
     prefix=[1]*length
